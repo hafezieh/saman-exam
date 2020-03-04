@@ -1,0 +1,42 @@
+version: '3'
+services:
+  os1:
+    container_name: hfz1
+    build: ./dir1
+    ports:
+      - "8080:8090"
+    tty: true
+    stdin_open: true
+    networks:
+      - os-service1
+
+
+  os2:
+    build: ./dir2
+    container_name: hfz2
+    ports:
+      - "8085:8090"
+    tty: true
+    stdin_open: true
+    networks:
+      - os-service2
+
+
+  os3:
+    build: ./dir3
+    container_name: hfz3
+    ports:
+      - "8090:8090"
+    tty: true
+    stdin_open: true
+    networks:
+      - os-service3
+    
+
+networks:
+  os-service1:
+    driver: bridge
+  os-service2:
+    driver: bridge
+  os-service3:
+    driver: bridge
