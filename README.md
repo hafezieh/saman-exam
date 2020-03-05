@@ -16,13 +16,13 @@ and I exposed port:8090 for my service
 ___
 **note:** We can use -p [port-number] during docker run instead of EXPOSE
 
-After that we sould put this docker file to 3 diffrent directory that I used **dir1**, **dir2** and **dir3** for that (the name of directories)
+After that, we should put this docker file to 3 diffrent directory that I used **dir1**, **dir2** and **dir3** for that (the name of directories)
 We can test our docker file by this command:
 
 `docker build --rm -t [optional-name]/python:centos7 .`
 
 # docker-compose configuration
-For next step we write our docker-compose file to bring our services at the same time 
+For next step we write our docker-compose file to bring our services up at the same time 
 I named my docker-compose file , **'local.yaml'**
 I consider 3 isolate services with 3 defined network for that 
 my services are : **os1**, **os2**, and **os3**
